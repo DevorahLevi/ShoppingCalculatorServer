@@ -16,7 +16,7 @@ public class ShoppingCalculatorServerController
     private final ShoppingCalculatorServerService shoppingCalculatorServerService;
 
     @PostMapping("/calculateListTotal")
-    public double calculateListTotal(@RequestBody ShoppingList shoppingList)
+    public Object calculateListTotal(@RequestBody ShoppingList shoppingList)
     {
         return shoppingCalculatorServerService.calculateTotal(shoppingList);
     }
